@@ -131,6 +131,65 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="script.js"></script>
+    <script src="script-v2.js"></script>
+    <script>
+      //input
+      const inFormatter = document.querySelector("#formatter");
+      //buttons
+      const btnFormatter = document.querySelector("#btnFormatter");
+      const btnDelete = document.querySelector("#btnDelete");
+      //checkers
+      const clearAccents = document.querySelector("#ClearAccents");
+      const toUpperCase = document.querySelector("#toUpperCase");
+      const toLowerCase = document.querySelector("#toLowerCase");
+      const capitalize = document.querySelector("#capitalize");
+      const toCamelCase = document.querySelector("#toCamelCase");
+      const toPascalCase = document.querySelector("#toPascalCase");
+      const toSnakeCase = document.querySelector("#tosnake_case");
+      //output
+      const outFormatter = document.querySelector("#outputFormatter");
+
+      //code
+      const TextFormatter1 = new TextFormatter();
+
+      function updateData() {
+        TextFormatter1.inputValue = inFormatter.value;
+
+        if (clearAccents.checked) {
+          result = TextFormatter1.removeAccents();
+        }
+        if (toUpperCase.checked) {
+          result = TextFormatter1.toUpperCase();
+        }
+        if (toLowerCase.checked) {
+          result = TextFormatter1.toLowerCase();
+        }
+        if (capitalize.checked) {
+          result = TextFormatter1.capitalize();
+        }
+        if (toCamelCase.checked) {
+          result = TextFormatter1.removeAccents().camelSentence();
+        }
+
+        if (toPascalCase.checked) {
+          result = TextFormatter1.removeAccents().toPascalCase();
+        }
+        if (toSnakeCase.checked) {
+          result = TextFormatter1.removeAccents().toLowerCase().toSnakeCase();
+        }
+
+        outFormatter.innerHTML = result.inputValue;
+      }
+
+      btnFormatter.addEventListener("click", updateData);
+      inFormatter.addEventListener("keyup", function (event) {
+        updateData();
+      });
+
+      btnDelete.addEventListener("click", () => {
+        inFormatter.value = "";
+        outFormatter.innerHTML = "";
+      });
+    </script>
   </body>
 </html>
