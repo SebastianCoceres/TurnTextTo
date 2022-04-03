@@ -21,7 +21,7 @@
   </head>
 
   <body class="container">
-    <h1>TextFormatter</h1>
+    <h1 class="my-4">TextFormatter</h1>
     <main>
       <div class="row">
         <div class="col-12">
@@ -47,72 +47,76 @@
           </div>
         </div>
       </div>
-      <ul class="list-unstyled my-2 d-flex flex-wrap">
-        <li class="col-12 col-sm-6 col-lg-3">
-          <input
-            class="input-radio-custom"
-            id="ClearAccents"
-            type="radio"
-            name="transform"
-          />
-          <label for="ClearAccents"> Eliminar Acentos </label>
-        </li>
-        <li class="col-12 col-sm-6 col-lg-3">
-          <input
-            class="input-radio-custom"
-            id="toUpperCase"
-            type="radio"
-            name="transform"
-          />
-          <label for="toUpperCase"> Mayúsculas </label>
-        </li>
-        <li class="col-12 col-sm-6 col-lg-3">
-          <input
-            class="input-radio-custom"
-            id="toLowerCase"
-            type="radio"
-            name="transform"
-          />
-          <label for="toLowerCase"> Minúsculas </label>
-        </li>
-        <li class="col-12 col-sm-6 col-lg-3">
-          <input
-            class="input-radio-custom"
-            id="capitalize"
-            type="radio"
-            name="transform"
-          />
-          <label for="capitalize"> Capitalizar </label>
-        </li>
-        <li class="col-12 col-sm-6 col-lg-3">
-          <input
-            class="input-radio-custom"
-            checked="true"
-            id="toCamelCase"
-            type="radio"
-            name="transform"
-          />
-          <label for="toCamelCase"> camelCase </label>
-        </li>
-        <li class="col-12 col-sm-6 col-lg-3">
-          <input
-            class="input-radio-custom"
-            id="toPascalCase"
-            type="radio"
-            name="transform"
-          />
-          <label for="toPascalCase"> PascalCase </label>
-        </li>
-        <li class="col-12 col-sm-6 col-lg-3">
-          <input
-            class="input-radio-custom"
-            id="tosnake_case"
-            type="radio"
-            name="transform"
-          />
-          <label for="tosnake_case"> snake_case </label>
-        </li>
-      </ul>
+      <section class="my-4">
+        <h2 class="small">Select one</h2>
+        <ul class="list-unstyled d-flex flex-wrap">
+          <li class="col-12 col-sm-6 col-lg-3">
+            <input
+              class="input-radio-custom"
+              id="ClearAccents"
+              type="radio"
+              name="transform"
+            />
+            <label for="ClearAccents"> Remove Accents</label>
+          </li>
+          <li class="col-12 col-sm-6 col-lg-3">
+            <input
+              class="input-radio-custom"
+              id="toUpperCase"
+              type="radio"
+              name="transform"
+            />
+            <label for="toUpperCase"> Uppercase </label>
+          </li>
+          <li class="col-12 col-sm-6 col-lg-3">
+            <input
+              class="input-radio-custom"
+              id="toLowerCase"
+              type="radio"
+              name="transform"
+            />
+            <label for="toLowerCase"> Lowercase </label>
+          </li>
+          <li class="col-12 col-sm-6 col-lg-3">
+            <input
+              class="input-radio-custom"
+              id="capitalize"
+              type="radio"
+              name="transform"
+            />
+            <label for="capitalize"> Capitalize </label>
+          </li>
+          <li class="col-12 col-sm-6 col-lg-3">
+            <input
+              class="input-radio-custom"
+              checked="true"
+              id="toCamelCase"
+              type="radio"
+              name="transform"
+            />
+            <label for="toCamelCase"> camelCase </label>
+          </li>
+          <li class="col-12 col-sm-6 col-lg-3">
+            <input
+              class="input-radio-custom"
+              id="toPascalCase"
+              type="radio"
+              name="transform"
+            />
+            <label for="toPascalCase"> PascalCase </label>
+          </li>
+          <li class="col-12 col-sm-6 col-lg-3">
+            <input
+              class="input-radio-custom"
+              id="tosnake_case"
+              type="radio"
+              name="transform"
+            />
+            <label for="tosnake_case"> snake_case </label>
+          </li>
+        </ul>
+      </section>
+
       <div class="col-12" style="width: 100%">
         <div class="alert alert-primary pb-5">
           <p class="destacado margin-t2em">Resultado</p>
@@ -122,7 +126,11 @@
       </div>
     </main>
     <footer>
-      <p class="sm">Code by Sebastián Cóceres</p>
+      <p class="sm d-flex align-items-center">
+        <i class="bi bi-code"></i>
+        <span class="px-2 text-dark">Sebastián Cóceres</span>
+        <i class="bi bi-code-slash"></i>
+      </p>
     </footer>
 
     <script

@@ -16,7 +16,7 @@ variables.checkers.forEach((el) => {
   el.addEventListener("change", updateData);
 });
 
-//maybe debouncing this get better performance
+//maybe debouncing this we get better performance
 function debounce(callback, delay = 1000) {
   let timeout;
 
