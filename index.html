@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>replit</title>
+    <title>TextFormatter</title>
 
     <!-- /*Bootstrap*/ -->
     <link
@@ -22,102 +22,108 @@
 
   <body class="container">
     <h1>TextFormatter</h1>
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="input-group">
-          <input
-            id="formatter"
-            spellcheck="true"
-            type="text"
-            class="form-control"
-            placeholder="texto aquí..."
-            aria-label="Texto a formatear"
-          />
-          <button
-            id="btnFormatter"
-            class="btn btn-outline-primary"
-            type="button"
-          >
-            <i class="bi bi-check-circle-fill"></i>
-          </button>
-          <button id="btnDelete" class="btn btn-outline-danger" type="button">
-            <i class="bi bi-x-circle-fill"></i>
-          </button>
+    <main>
+      <div class="row">
+        <div class="col-12">
+          <div class="input-group">
+            <input
+              id="formatter"
+              spellcheck="true"
+              type="text"
+              class="form-control"
+              placeholder="Texto aquí..."
+              aria-label="Texto a formatear"
+            />
+            <button
+              id="btnFormatter"
+              class="btn btn-outline-primary"
+              type="button"
+            >
+              <i class="bi bi-check-circle-fill"></i>
+            </button>
+            <button id="btnDelete" class="btn btn-outline-danger" type="button">
+              <i class="bi bi-x-circle-fill"></i>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="d-flex align-items-center justify-content-start flex-wrap my-2">
-      <label class="col-xs-6 d-block">
-        <input
-          class="form-check-input"
-          id="ClearAccents"
-          type="radio"
-          name="transform"
-        />
-        Eliminar Acentos
-      </label>
-      <label class="col-xs-6 d-block">
-        <input
-          class="form-check-input"
-          id="toUpperCase"
-          type="radio"
-          name="transform"
-        />
-        Mayusculas
-      </label>
-      <label class="col-xs-6 d-block">
-        <input
-          class="form-check-input"
-          id="toLowerCase"
-          type="radio"
-          name="transform"
-        />
-        Minúsculas
-      </label>
-      <label class="col-xs-6 d-block">
-        <input
-          class="form-check-input"
-          id="capitalize"
-          type="radio"
-          name="transform"
-        />
-        Capitalizar
-      </label>
-      <label class="col-xs-6 d-block">
-        <input
-          class="form-check-input"
-          checked="true"
-          id="toCamelCase"
-          type="radio"
-          name="transform"
-        />
-        Convertir a camelCase
-      </label>
-      <label class="col-xs-6 d-block">
-        <input
-          class="form-check-input"
-          id="toPascalCase"
-          type="radio"
-          name="transform"
-        />
-        Convertir a PascalCase
-      </label>
-      <label class="col-xs-6 d-block">
-        <input
-          class="form-check-input"
-          id="tosnake_case"
-          type="radio"
-          name="transform"
-        />
-        Convertir a snake_case
-      </label>
-    </div>
-    <div class="col-xs-12" style="width: 100%">
-      <div class="alert alert-primary">
-        <p class="destacado margin-t2em">Resultado</p>
-        <div class="alert alert-light" id="outputFormatter"></div>
+      <ul class="list-unstyled my-2 d-flex flex-wrap">
+        <li class="col-12 col-sm-6 col-lg-3">
+          <input
+            class="input-radio-custom"
+            id="ClearAccents"
+            type="radio"
+            name="transform"
+          />
+          <label for="ClearAccents"> Eliminar Acentos </label>
+        </li>
+        <li class="col-12 col-sm-6 col-lg-3">
+          <input
+            class="input-radio-custom"
+            id="toUpperCase"
+            type="radio"
+            name="transform"
+          />
+          <label for="toUpperCase"> Mayúsculas </label>
+        </li>
+        <li class="col-12 col-sm-6 col-lg-3">
+          <input
+            class="input-radio-custom"
+            id="toLowerCase"
+            type="radio"
+            name="transform"
+          />
+          <label for="toLowerCase"> Minúsculas </label>
+        </li>
+        <li class="col-12 col-sm-6 col-lg-3">
+          <input
+            class="input-radio-custom"
+            id="capitalize"
+            type="radio"
+            name="transform"
+          />
+          <label for="capitalize"> Capitalizar </label>
+        </li>
+        <li class="col-12 col-sm-6 col-lg-3">
+          <input
+            class="input-radio-custom"
+            checked="true"
+            id="toCamelCase"
+            type="radio"
+            name="transform"
+          />
+          <label for="toCamelCase"> camelCase </label>
+        </li>
+        <li class="col-12 col-sm-6 col-lg-3">
+          <input
+            class="input-radio-custom"
+            id="toPascalCase"
+            type="radio"
+            name="transform"
+          />
+          <label for="toPascalCase"> PascalCase </label>
+        </li>
+        <li class="col-12 col-sm-6 col-lg-3">
+          <input
+            class="input-radio-custom"
+            id="tosnake_case"
+            type="radio"
+            name="transform"
+          />
+          <label for="tosnake_case"> snake_case </label>
+        </li>
+      </ul>
+      <div class="col-12" style="width: 100%">
+        <div class="alert alert-primary pb-5">
+          <p class="destacado margin-t2em">Resultado</p>
+          <div class="alert alert-light" id="outputFormatter"></div>
+          <button id="copyBtn" class="btn btn-primary float-end">Copy</button>
+        </div>
       </div>
-    </div>
+    </main>
+    <footer>
+      <p class="sm">Code by Sebastián Cóceres</p>
+    </footer>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
@@ -131,65 +137,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="script-v2.js"></script>
-    <script>
-      //input
-      const inFormatter = document.querySelector("#formatter");
-      //buttons
-      const btnFormatter = document.querySelector("#btnFormatter");
-      const btnDelete = document.querySelector("#btnDelete");
-      //checkers
-      const clearAccents = document.querySelector("#ClearAccents");
-      const toUpperCase = document.querySelector("#toUpperCase");
-      const toLowerCase = document.querySelector("#toLowerCase");
-      const capitalize = document.querySelector("#capitalize");
-      const toCamelCase = document.querySelector("#toCamelCase");
-      const toPascalCase = document.querySelector("#toPascalCase");
-      const toSnakeCase = document.querySelector("#tosnake_case");
-      //output
-      const outFormatter = document.querySelector("#outputFormatter");
-
-      //code
-      const TextFormatter1 = new TextFormatter();
-
-      function updateData() {
-        TextFormatter1.inputValue = inFormatter.value;
-
-        if (clearAccents.checked) {
-          result = TextFormatter1.removeAccents();
-        }
-        if (toUpperCase.checked) {
-          result = TextFormatter1.toUpperCase();
-        }
-        if (toLowerCase.checked) {
-          result = TextFormatter1.toLowerCase();
-        }
-        if (capitalize.checked) {
-          result = TextFormatter1.capitalize();
-        }
-        if (toCamelCase.checked) {
-          result = TextFormatter1.removeAccents().camelSentence();
-        }
-
-        if (toPascalCase.checked) {
-          result = TextFormatter1.removeAccents().toPascalCase();
-        }
-        if (toSnakeCase.checked) {
-          result = TextFormatter1.removeAccents().toLowerCase().toSnakeCase();
-        }
-
-        outFormatter.innerHTML = result.inputValue;
-      }
-
-      btnFormatter.addEventListener("click", updateData);
-      inFormatter.addEventListener("keyup", function (event) {
-        updateData();
-      });
-
-      btnDelete.addEventListener("click", () => {
-        inFormatter.value = "";
-        outFormatter.innerHTML = "";
-      });
-    </script>
+    <script src="script.js" type="module"></script>
   </body>
 </html>

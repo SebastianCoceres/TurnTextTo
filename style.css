@@ -1,3 +1,34 @@
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+.list-unstyled li {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 label {
-    margin: 0.5em;
+  text-align: center;
+  display: block;
+  padding: 0.5em;
+}
+
+.input-radio-custom {
+  appearance: none;
+  display: none;
+}
+
+.input-radio-custom:checked + label {
+  font-weight: bold;
+  background: #0d6efd;
+  color: #fff;
+}
+
+#outputFormatter {
+  min-height: 25vh;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
 }
