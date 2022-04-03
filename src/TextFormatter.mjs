@@ -42,7 +42,6 @@ class TextFormatter {
   }
 
   camelSentence() {
-    console.log(this)
     this.#newStr = this.removeAccents()
       .inputValue.trim()
       .toLowerCase()
