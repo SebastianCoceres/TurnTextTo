@@ -11,6 +11,7 @@ const toUpperCase = document.querySelector("#toUpperCase");
 const toLowerCase = document.querySelector("#toLowerCase");
 const capitalize = document.querySelector("#capitalize");
 const toCamelCase = document.querySelector("#toCamelCase");
+const toFirstCapital = document.querySelector("#toFirstCapital");
 const toPascalCase = document.querySelector("#toPascalCase");
 const toSnakeCase = document.querySelector("#tosnake_case");
 const checkers = document.querySelectorAll(".input-radio-custom");
@@ -25,6 +26,7 @@ export {
   toUpperCase,
   toLowerCase,
   capitalize,
+  toFirstCapital,
   toCamelCase,
   toPascalCase,
   toSnakeCase,

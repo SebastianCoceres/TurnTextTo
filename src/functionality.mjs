@@ -12,6 +12,7 @@ export function updateData() {
   if (v.toUpperCase.checked) result = TextFormatter1.toUpperCase();
   if (v.toLowerCase.checked) result = TextFormatter1.toLowerCase();
   if (v.capitalize.checked) result = TextFormatter1.capitalize();
+  if (v.toFirstCapital.checked) result = TextFormatter1.Firstcapital();
   if (v.toCamelCase.checked) result = TextFormatter1.camelSentence();
   if (v.toPascalCase.checked) result = TextFormatter1.toPascalCase();
   if (v.toSnakeCase.checked) result = TextFormatter1.toSnakeCase();

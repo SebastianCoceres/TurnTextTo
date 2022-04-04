@@ -41,6 +41,12 @@ class TextFormatter {
     return this;
   }
 
+  Firstcapital() {
+    let temp = this.#newStr.toLowerCase();
+    this.#newStr = temp.charAt(0).toUpperCase() + temp.slice(1);
+    return this;
+  }
+
   camelSentence() {
     this.#newStr = this.removeAccents()
       .inputValue.trim()
@@ -64,7 +70,7 @@ class TextFormatter {
 
   toSnakeCase() {
     this.#newStr = this.removeAccents()
-      .inputValue.toLowerCase()
+      .inputValue.toUpperCase()
       .replaceAll(" ", "_");
     return this;
   }
