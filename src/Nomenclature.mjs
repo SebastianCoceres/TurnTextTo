@@ -1,14 +1,15 @@
 class NJS extends String{
+  #newStr
   constructor(str) {
-    this.newStr = str;
+    this.#newStr = str;
   }
 
   get value() {
-    return this.newStr;
+    return this.#newStr;
   }
 
   set value(newStr) {
-    this.newStr = newStr;
+    this.#newStr = newStr;
   }
 
   static removeAccents() {
@@ -68,7 +69,27 @@ class NJS extends String{
   }
 
   static toSnakeCase() {
+    this.value = this.removeAccents().LowerCase().value.replaceAll(" ", "_");
+    return this;
+  }
+
+  static toScreamingSnakeCase() {
     this.value = this.removeAccents().UpperCase().value.replaceAll(" ", "_");
+    return this;
+  }
+
+  static toKebabCase() {
+    this.value = this.removeAccents().LowerCase().value.replaceAll(" ", "-");
+    return this;
+  }
+
+  static toTrainCase() {
+    this.value = this.removeAccents().capitalize().value.replaceAll(" ", "-");
+    return this;
+  }
+
+  static toCobolCase() {
+    this.value = this.removeAccents().UpperCase().value.replaceAll(" ", "-");
     return this;
   }
 }

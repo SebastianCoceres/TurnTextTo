@@ -13,7 +13,10 @@ export function updateData() {
   if (v.toCamelCase.checked) result = NJS.camelSentence();
   if (v.toPascalCase.checked) result = NJS.toPascalCase();
   if (v.toSnakeCase.checked) result = NJS.toSnakeCase();
-
+  if (v.toScreamingSnakeCase.checked) result = NJS.toScreamingSnakeCase();
+  if (v.toKebabCase.checked) result = NJS.toKebabCase();
+  if (v.toTrainCase.checked) result = NJS.toTrainCase();
+  if (v.toCobolCase.checked) result = NJS.toCobolCase();
   v.outFormatter.innerHTML = result.value;
 }
 
