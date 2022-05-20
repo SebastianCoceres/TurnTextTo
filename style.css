@@ -81,6 +81,11 @@ footer {
   background: var(--primary-color);
 }
 
+
+.darkTheme footer a {
+  color: var(--text-color) !important;
+}
+
 #theme-toggle {
   visibility: hidden;
 }
