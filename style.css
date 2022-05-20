@@ -47,12 +47,14 @@ footer {
 
 /*Dark Theme*/
 .darkTheme {
-  --primary-color: var(--bs-gray-900);
+  --primary-color: #304360;
   --text-color: var(--bs-white);
+  --background-color: var(--bs-gray-900);
+  --inputs-color: #26272a;
 }
 
 .darkTheme body {
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   color: var(--text-color);
 }
 
@@ -61,12 +63,22 @@ footer {
 }
 
 .darkTheme .nav-link {
-  color: white;
-  ;
+  color: var(--text-color);
 }
 
-.darkTheme #formatter {
-  background-color: #26272a;
+.darkTheme #formatter,
+.darkTheme #outputFormatter {
+  background-color: var(--inputs-color);
+  color: var(--text-color);
+}
+
+.darkTheme .alert-primary {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.darkTheme .input-radio-custom:checked+label {
+  background: var(--primary-color);
 }
 
 #theme-toggle {

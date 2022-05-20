@@ -7,12 +7,13 @@ variables.toggleTheme.addEventListener("click", () => {
         variables.btnFormatter?.classList.add("btn-primary")
         variables.btnDelete?.classList.remove("btn-outline-danger")
         variables.btnDelete?.classList.add("btn-danger")
+
     } else {
         variables.docHtml.classList.remove("darkTheme")
         variables.btnFormatter?.classList.remove("btn-primary")
         variables.btnFormatter?.classList.add("btn-outline-primary")
         variables.btnDelete?.classList.remove("btn-danger")
         variables.btnDelete?.classList.add("btn-outline-danger")
-    }
 
+    }
 })
