@@ -1,3 +1,8 @@
+:root {
+  --primary-color: var(--bs-blue);
+  --text-color: var(--bs-white);
+}
+
 body {
   position: relative;
   min-height: 100vh;
@@ -15,14 +20,16 @@ label {
 }
 
 .input-radio-custom {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   display: none;
 }
 
-.input-radio-custom:checked + label {
+.input-radio-custom:checked+label {
   font-weight: bold;
-  background: #0d6efd;
-  color: #fff;
+  background: var(--primary-color);
+  color: var(--text-color);
 }
 
 #outputFormatter {
@@ -36,4 +43,51 @@ footer {
   left: 0;
   right: 0;
   width: 100%;
+}
+
+/*Dark Theme*/
+.darkTheme {
+  --primary-color: var(--bs-gray-900);
+  --text-color: var(--bs-white);
+}
+
+.darkTheme body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.darkTheme .list-unstyled li {
+  border: 1px solid rgba(255, 255, 255, 0.5)
+}
+
+.darkTheme .nav-link {
+  color: white;
+  ;
+}
+
+.darkTheme #formatter {
+  background-color: #26272a;
+}
+
+#theme-toggle {
+  visibility: hidden;
+}
+
+#theme-toggle+label {
+  content: '';
+  display: inline-block;
+  cursor: pointer;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+#theme-toggle:not(:checked)+label {
+  background-color: gold;
+}
+
+#theme-toggle:checked+label {
+  background-color: transparent;
+  box-shadow: inset -.5em -.5em 1px 1px #fff;
 }

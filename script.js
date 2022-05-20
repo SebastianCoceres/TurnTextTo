@@ -31,3 +31,5 @@ function debounce(callback, delay = 1000) {
 const DebounceFormatter = debounce(() => {
   updateData();
 }, 500);
+
+

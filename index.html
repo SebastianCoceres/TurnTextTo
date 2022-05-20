@@ -1,248 +1,173 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>NomenclatureJS</title>
-    <meta charset="UTF-8" />
-    <meta name="description" content="NomenclatureJS is a simple tool for facilitate the writing of identifiers, variables and texts in html, css and js" />
-    <meta name="keywords" content="HTML, CSS, JavaScript, text, format, NomenclatureJS, nomenclature, camelcase, pascalcase, uppercase, lowercase, capitalize, first, capital, remote, accents, snakecase" />
-    <meta name="author" content="Sebastián Cóceres" />
+<html lang="es">
+
+<head>
+    <title>TurnTextTo</title>
+    <meta name="title" content="TurnTextTo">
+    <meta name="description"
+        content="TurnTextTo is a simple tool for facilitate convertion of plain texts and make more easy to maintain coding conventions in JS and other languajes">
+    <meta name="keywords"
+        content="HTML, CSS, JavaScript, text, format, turn,text,to, TurnTextTo, nomenclature, camelcase, pascalcase, uppercase, lowercase, capitalize, first, capital, remote, accents, snakecase">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Spanish">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- /*Bootstrap*/ -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
     <!--styles-->
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+</head>
 
-  <body class="container">
+<body class="container">
     <header>
-      <h1 class="my-4 text-center">NomenclatureJS</h1>
-      <nav class="d-flex justify-content-center py-3">
-        <ul class="nav nav-pills">
-          <li class="nav-item">
-            <a href="./index.html" class="nav-link active" aria-current="page"
-              >Home</a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="./pages/about.html" class="nav-link">About</a>
-          </li>
-        </ul>
-      </nav>
-      <hr />
+        <h1 class="my-4 text-center">TurnTextTo</h1>
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <input type="checkbox" id="theme-toggle">
+                <label for="theme-toggle"></label>
+            </div>
+
+
+            <nav class="d-flex justify-content-center py-3">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link active" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./pages/about.html" class="nav-link">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <hr />
     </header>
     <main>
-      <div class="row">
-        <div class="col-12">
-          <div class="input-group">
-            <input
-              id="formatter"
-              spellcheck="true"
-              type="text"
-              class="form-control"
-              placeholder="Text here..."
-              aria-label="Texto a formatear"
-            />
-            <button
-              id="btnFormatter"
-              class="btn btn-outline-primary"
-              type="button"
-            >
-              <i class="bi bi-check-circle-fill"></i>
-            </button>
-            <button id="btnDelete" class="btn btn-outline-danger" type="button">
-              <i class="bi bi-x-circle-fill"></i>
-            </button>
-          </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="input-group">
+                    <input id="formatter" spellcheck="true" type="text" class="form-control" placeholder="Text here..."
+                        aria-label="Texto a formatear" />
+                    <button id="btnFormatter" class="btn btn-outline-primary" type="button">
+                        <i class="bi bi-check-circle-fill"></i>
+                    </button>
+                    <button id="btnDelete" class="btn btn-outline-danger" type="button">
+                        <i class="bi bi-x-circle-fill"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
-      <section class="my-4">
-        <h2 class="small">Select one</h2>
-        <ul class="list-unstyled d-flex flex-wrap">
-          <li class="col-12 col-sm-6 col-lg-3">
-            <input
-              class="input-radio-custom"
-              id="ClearAccents"
-              type="radio"
-              name="transform"
-            />
-            <label for="ClearAccents"> Remove Accents</label>
-          </li>
-          <!--/*  */-->
-          <li class="col-12 col-sm-6 col-lg-3">
-            <input
-              class="input-radio-custom"
-              id="toUpperCase"
-              type="radio"
-              name="transform"
-            />
-            <label for="toUpperCase"> Uppercase </label>
-          </li>
-          <!--/*  */-->
-          <li class="col-12 col-sm-6 col-lg-3">
-            <input
-              class="input-radio-custom"
-              id="toLowerCase"
-              type="radio"
-              name="transform"
-            />
-            <label for="toLowerCase"> Lowercase </label>
-          </li>
-          <!--/*  */-->
-          <li class="col-12 col-sm-6 col-lg-3">
-            <input
-              class="input-radio-custom"
-              id="capitalize"
-              type="radio"
-              name="transform"
-            />
-            <label for="capitalize"> Capitalize </label>
-          </li>
-          <!--/*  */-->
-          <li class="col-12 col-sm-6 col-lg-3">
-            <input
-              class="input-radio-custom"
-              checked="true"
-              id="toFirstCapital"
-              type="radio"
-              name="transform"
-            />
-            <label for="toFirstCapital"> First Capital</label>
-          </li>
-          <!--/*  */-->
-          <li class="col-12 col-sm-6 col-lg-3">
-            <input
-              class="input-radio-custom"
-              checked="true"
-              id="toCamelCase"
-              type="radio"
-              name="transform"
-            />
-            <label for="toCamelCase"> camelCase </label>
-          </li>
-          <!--/*  */-->
-          <li class="col-12 col-sm-6 col-lg-3">
-            <input
-              class="input-radio-custom"
-              id="toPascalCase"
-              type="radio"
-              name="transform"
-            />
-            <label for="toPascalCase"> PascalCase </label>
-          </li>
-          <!--/*  */-->
-          <li class="col-12 col-sm-6 col-lg-3">
-            <input
-              class="input-radio-custom"
-              id="tosnake_case"
-              type="radio"
-              name="transform"
-            />
-            <label for="tosnake_case"> snake_case </label>
-          </li>
-          <!--/*  */-->
-          <li class="col-12 col-sm-6 col-lg-3">
-            <input
-              class="input-radio-custom"
-              id="toScreamingSnakeCase"
-              type="radio"
-              name="transform"
-            />
-            <label for="toScreamingSnakeCase"> SNAKE_CASE</label>
-          </li>
-          <!--/*  */-->
-          <li class="col-12 col-sm-6 col-lg-3">
-            <input
-              class="input-radio-custom"
-              id="toKebabCase"
-              type="radio"
-              name="transform"
-            />
-            <label for="toKebabCase"> kebab-case </label>
-          </li>
-          <!--/*  */-->
-          <li class="col-12 col-sm-6 col-lg-3">
-            <input
-              class="input-radio-custom"
-              id="toTrainCase"
-              type="radio"
-              name="transform"
-            />
-            <label for="toTrainCase"> Train-Case </label>
-          </li>
-          <!--/*  */-->
-          <li class="col-12 col-sm-6 col-lg-3">
-            <input
-              class="input-radio-custom"
-              id="toCobolCase"
-              type="radio"
-              name="transform"
-            />
-            <label for="toCobolCase"> COBOL-CASE </label>
-          </li>
+        <section class="my-4">
+            <h2 class="small">Select one</h2>
+            <ul class="list-unstyled d-flex flex-wrap">
+                <li class="col-12 col-sm-6 col-lg-3">
+                    <input class="input-radio-custom" id="ClearAccents" type="radio" name="transform" />
+                    <label for="ClearAccents"> Remove Accents</label>
+                </li>
+                <!--/*  */-->
+                <li class="col-12 col-sm-6 col-lg-3">
+                    <input class="input-radio-custom" id="toUpperCase" type="radio" name="transform" />
+                    <label for="toUpperCase"> Uppercase </label>
+                </li>
+                <!--/*  */-->
+                <li class="col-12 col-sm-6 col-lg-3">
+                    <input class="input-radio-custom" id="toLowerCase" type="radio" name="transform" />
+                    <label for="toLowerCase"> Lowercase </label>
+                </li>
+                <!--/*  */-->
+                <li class="col-12 col-sm-6 col-lg-3">
+                    <input class="input-radio-custom" id="capitalize" type="radio" name="transform" />
+                    <label for="capitalize"> Capitalize </label>
+                </li>
+                <!--/*  */-->
+                <li class="col-12 col-sm-6 col-lg-3">
+                    <input class="input-radio-custom" checked="true" id="toFirstCapital" type="radio"
+                        name="transform" />
+                    <label for="toFirstCapital"> First Capital</label>
+                </li>
+                <!--/*  */-->
+                <li class="col-12 col-sm-6 col-lg-3">
+                    <input class="input-radio-custom" checked="true" id="toCamelCase" type="radio" name="transform" />
+                    <label for="toCamelCase"> camelCase </label>
+                </li>
+                <!--/*  */-->
+                <li class="col-12 col-sm-6 col-lg-3">
+                    <input class="input-radio-custom" id="toPascalCase" type="radio" name="transform" />
+                    <label for="toPascalCase"> PascalCase </label>
+                </li>
+                <!--/*  */-->
+                <li class="col-12 col-sm-6 col-lg-3">
+                    <input class="input-radio-custom" id="tosnake_case" type="radio" name="transform" />
+                    <label for="tosnake_case"> snake_case </label>
+                </li>
+                <!--/*  */-->
+                <li class="col-12 col-sm-6 col-lg-3">
+                    <input class="input-radio-custom" id="toScreamingSnakeCase" type="radio" name="transform" />
+                    <label for="toScreamingSnakeCase"> SNAKE_CASE</label>
+                </li>
+                <!--/*  */-->
+                <li class="col-12 col-sm-6 col-lg-3">
+                    <input class="input-radio-custom" id="toKebabCase" type="radio" name="transform" />
+                    <label for="toKebabCase"> kebab-case </label>
+                </li>
+                <!--/*  */-->
+                <li class="col-12 col-sm-6 col-lg-3">
+                    <input class="input-radio-custom" id="toTrainCase" type="radio" name="transform" />
+                    <label for="toTrainCase"> Train-Case </label>
+                </li>
+                <!--/*  */-->
+                <li class="col-12 col-sm-6 col-lg-3">
+                    <input class="input-radio-custom" id="toCobolCase" type="radio" name="transform" />
+                    <label for="toCobolCase"> COBOL-CASE </label>
+                </li>
 
-        </ul>
-      </section>
+            </ul>
+        </section>
 
-      <div class="col-12" style="width: 100%">
-        <div class="alert alert-primary pb-5">
-          <p class="destacado margin-t2em">Result</p>
-          <div class="alert alert-light" id="outputFormatter"></div>
-          <button id="copyBtn" class="btn btn-primary float-end">Copy</button>
+        <div class="col-12" style="width: 100%">
+            <div class="alert alert-primary pb-5">
+                <p class="destacado margin-t2em">Result</p>
+                <div class="alert alert-light" id="outputFormatter"></div>
+                <button id="copyBtn" class="btn btn-primary float-end">Copy</button>
+            </div>
         </div>
-      </div>
     </main>
 
-    <footer
-      class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
-    >
-      <div class="col-md-4 d-flex align-items-center">
-        <span class="text-muted">© Sebastián Cóceres</span>
-      </div>
+    <footer class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <span class="text-muted">© Sebastián Cóceres</span>
+        </div>
 
-      <ul class="nav col-md-4 justify-content-end d-flex">
-        <li class="ms-3">
-          <a class="text-dark" href="https://twitter.com/SebassCoceres">
-            <i class="bi bi-twitter"></i>
-          </a>
-        </li>
-        <li class="ms-3">
-          <a
-            class="text-dark"
-            href="https://www.linkedin.com/in/sebastian-coceres/"
-          >
-            <i class="bi bi-linkedin"></i>
-          </a>
-        </li>
-        <li class="ms-3">
-          <a class="text-dark" href="https://github.com/SebastianCoceres">
-            <i class="bi bi-github"></i>
-          </a>
-        </li>
-      </ul>
+        <ul class="nav col-md-4 justify-content-end d-flex">
+            <li class="ms-3">
+                <a class="text-dark" href="https://twitter.com/SebassCoceres">
+                    <i class="bi bi-twitter"></i>
+                </a>
+            </li>
+            <li class="ms-3">
+                <a class="text-dark" href="https://www.linkedin.com/in/sebastian-coceres/">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </li>
+            <li class="ms-3">
+                <a class="text-dark" href="https://github.com/SebastianCoceres">
+                    <i class="bi bi-github"></i>
+                </a>
+            </li>
+        </ul>
     </footer>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 
     <script src="script.js" type="module"></script>
-  </body>
+    <script src="./src/toggleTheme.js" type="module"></script>
+</body>
+
 </html>

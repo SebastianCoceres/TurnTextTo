@@ -22,6 +22,11 @@ const checkers = document.querySelectorAll(".input-radio-custom");
 //output
 const outFormatter = document.querySelector("#outputFormatter");
 
+//switch light dark mode
+const toggleTheme = document.querySelector("#theme-toggle");
+const docHtml = document.querySelector("html")
+const docBody = document.querySelector("body")
+
 export {
   inFormatter,
   btnFormatter,
@@ -40,4 +45,7 @@ export {
   toCobolCase,
   checkers,
   outFormatter,
+  toggleTheme,
+  docHtml,
+  docBody
 };

@@ -1,251 +1,95 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>NomenclatureJS About</title>
-    <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="NomenclatureJS is a simple tool for facilitate the writing of identifiers, variables and texts in html, css and js"
-    />
-    <meta
-      name="keywords"
-      content="HTML, CSS, JavaScript, text, format, NomenclatureJS, nomenclature, camelcase, pascalcase, uppercase, lowercase, capitalize, first, capital, remote, accents, snakecase"
-    />
-    <meta name="author" content="Sebastián Cóceres" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index,follow" />
+<html lang="es">
 
-    <!-- /*Bootstrap*/ -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <!--styles-->
-    <link href="../style.css" rel="stylesheet" type="text/css" />
-  </head>
+<head>
+	<title>TurnTextTo About</title>
+	<meta name="title" content="TurnTextTo">
+	<meta name="description" content="TurnTextTo is a simple tool for facilitate convertion of plain texts">
+	<meta name="keywords"
+		content="HTML, CSS, JavaScript, text, format, turn,text,to, TurnTextTo, nomenclature, camelcase, pascalcase, uppercase, lowercase, capitalize, first, capital, remote, accents, snakecase">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="language" content="Spanish">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <body class="container">
-    <header>
-      <h1 class="my-4 text-center">NomenclatureJS</h1>
-      <nav class="d-flex justify-content-center py-3">
-        <ul class="nav nav-pills">
-          <li class="nav-item">
-            <a href="../index.html" class="nav-link" aria-current="page"
-              >Home</a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="./about.html" class="nav-link active">About</a>
-          </li>
-        </ul>
-      </nav>
-      <hr />
-    </header>
-    <main>
-      <section>
-        <p>
-          <strong>NomenclatureJS </strong> is a simple tool to facilitate the
-          writing of coding conventions.
-        </p>
-        <article class="alert alert-success">
-          <p>
-            Coding conventions are a set of rules for a specific programming
-            language that recommend programming styles, best practices, and
-            methods for maintaining the appearance of source code. These
-            conventions include file organization, indentation, comments,
-            declarations the blanks, the opening and closing braces...
-          </p>
-          <p>
-            Software developers are encouraged to follow these conventions to
-            help improve source code readability and ease software maintenance.
-            The main reasons for the existence of these conventions are to
-            reduce efforts when reading and understanding the source code and
-            maintain the appropriate style standard for the programming
-            language, in this way we focus on reviewing the most important
-            points of our code. font rather than syntax and styles.
-          </p>
-        </article>
-        <p>
-          if you want to see information about it you can see
-          <a href="https://www.crockford.com/code.html"
-            >Douglas Crockford's conventions</a
-          >
-        </p>
-        <p>
-          Just write what you want in the input and the code It will
-          automatically take care of returning the formatted text in the
-          nomenclature you want. Then copy and paste as good programmer.
-        </p>
-      </section>
 
-      <!-- <section>
-        <h2 class="mt-5" style="font-size: 2em">Nomenclatura de variables</h2>
-        <hr />
-        <div class="accordion" id="accordionPanelsStayOpenExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseOne"
-                aria-expanded="false"
-                aria-controls="panelsStayOpen-collapseOne"
-              >
-                Variables de solo lectura
-              </button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapseOne"
-              class="accordion-collapse collapse"
-              aria-labelledby="panelsStayOpen-headingOne"
-            >
-              <div class="accordion-body">
-                <ul>
-                  <li>SNAKE_CASE</li>
-                  <li>Valores constantes</li>
-                  <li>Conocemos su valor antes de ejecutar el programa</li>
-                  <li>solo para leer su valor, no debemos modificarlos</li>
-                </ul>
-                <p>Ejemplo</p>
-                <pre>
-                    <code>const MAX_LONG_NAME = 180</code>
-                </pre>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseTwo"
-                aria-expanded="false"
-                aria-controls="panelsStayOpen-collapseTwo"
-              >
-                Variables comunes
-              </button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapseTwo"
-              class="accordion-collapse collapse"
-              aria-labelledby="panelsStayOpen-headingTwo"
-            >
-              <div class="accordion-body">
-                <ul>
-                  <li>camelCase</li>
-                  <li>
-                    Números / strings / objetos / arrays: sustantivos con
-                    adjetivos
-                  </li>
-                  <li>
-                    Booleanos: es.../esta.../tiene.../ha... (o mejor en ingles
-                    is.../has...)
-                  </li>
-                </ul>
-                <p>Ejemplo</p>
-                <pre>
-                    <code>
-                        /*Números / strings / objetos / arrays*/
-                        nombreCompleto = "Sebastian Coceres"
-                        productoDestacado = {...}
+	<!-- /*Bootstrap*/ -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+	<!--styles-->
+	<link href="../style.css" rel="stylesheet" type="text/css" />
+</head>
 
-                        /*Booleanos*/
-                        isAdmin = true
-                        isUser = true
-                        hasPermission = false
-                    </code>
-                </pre>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseThree"
-                aria-expanded="false"
-                aria-controls="panelsStayOpen-collapseThree"
-              >
-                Métodos y funciones
-              </button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapseThree"
-              class="accordion-collapse collapse"
-              aria-labelledby="panelsStayOpen-headingThree"
-            >
-              <div class="accordion-body">
-                <ul>
-                  <li>camelCase</li>
-                  <li>
-                    Verbos en infinitivo: que acción realiza la función
-                  </li>
+<body class="container">
+	<header>
+		<h1 class="my-4 text-center">TurnTextTo</h1>
+		<div class="d-flex justify-content-between align-items-center">
+			<div>
+				<input type="checkbox" id="theme-toggle">
+				<label for="theme-toggle"></label>
+			</div>
 
-                </ul>
-                <p>Ejemplo</p>
-                <pre>
-                      <code>
-                        function crearProducto() {
-                            ...
-                        }
-                      </code>
-                  </pre>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-    </main>
 
-    <footer
-      class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
-    >
-      <div class="col-md-4 d-flex align-items-center">
-        <span class="text-muted">© Sebastián Cóceres</span>
-      </div>
+			<nav class="d-flex justify-content-center py-3">
+				<ul class="nav nav-pills">
+					<li class="nav-item">
+						<a href="../index.html" class="nav-link" aria-current="page">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="../pages/about.html" class="nav-link active">About</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<hr />
+	</header>
+	<main>
+		<section>
+			<p>
+				<strong>TurnTextTo </strong> is a simple tool to make my life easy while i'm writing coding conventions,
+				classes
+				and id for HTML or just to manipulate plain text
+			</p>
+			<p>
+				Just write what you want in the input and the code It will
+				automatically take care of returning the formatted text in the
+				nomenclature you want. Then copy and paste as good programmer.
+			</p>
+		</section>
+	</main>
 
-      <ul class="nav col-md-4 justify-content-end d-flex">
-        <li class="ms-3">
-          <a class="text-dark" href="https://twitter.com/SebassCoceres">
-            <i class="bi bi-twitter"></i>
-          </a>
-        </li>
-        <li class="ms-3">
-          <a
-            class="text-dark"
-            href="https://www.linkedin.com/in/sebastian-coceres/"
-          >
-            <i class="bi bi-linkedin"></i>
-          </a>
-        </li>
-        <li class="ms-3">
-          <a class="text-dark" href="https://github.com/SebastianCoceres">
-            <i class="bi bi-github"></i>
-          </a>
-        </li>
-      </ul>
-    </footer>
+	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+		<div class="col-md-4 d-flex align-items-center">
+			<span class="text-muted">© Sebastián Cóceres</span>
+		</div>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+		<ul class="nav col-md-4 justify-content-end d-flex">
+			<li class="ms-3">
+				<a class="text-dark" href="https://twitter.com/SebassCoceres">
+					<i class="bi bi-twitter"></i>
+				</a>
+			</li>
+			<li class="ms-3">
+				<a class="text-dark" href="https://www.linkedin.com/in/sebastian-coceres/">
+					<i class="bi bi-linkedin"></i>
+				</a>
+			</li>
+			<li class="ms-3">
+				<a class="text-dark" href="https://github.com/SebastianCoceres">
+					<i class="bi bi-github"></i>
+				</a>
+			</li>
+		</ul>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+	</script>
+	<script src="../src/toggleTheme.js" type="module"></script>
+</body>
+
 </html>
